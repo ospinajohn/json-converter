@@ -1,0 +1,147 @@
+/* ===== FUENTES Y CONFIGURACIÓN BASE ===== */
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* ===== FONDOS Y GRADIENTES ===== */
+.gradient-bg { 
+    background: #e5e7eb; /* Un blanco más oscuro (gris muy claro) */
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.preview-area {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+}
+
+/* ===== ÁREA DE ENTRADA Y SALIDA ===== */
+.input-area {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.json-output {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #68d391;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ===== CONTROLES Y SWITCHES ===== */
+.toggle-switch {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-switch:checked + .toggle-bg {
+    background: linear-gradient(135deg, #4299e1, #667eea);
+}
+
+.toggle-switch:checked + .toggle-bg .toggle-dot {
+    transform: translateX(1.25rem);
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+    background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 153, 225, 0.6);
+}
+
+/* ===== ESTADOS DE NOTIFICACIONES ===== */
+.status-success { 
+    background: linear-gradient(135deg, #48bb78, #38a169); 
+}
+
+.status-error { 
+    background: linear-gradient(135deg, #f56565, #e53e3e); 
+}
+
+.status-warning { 
+    background: linear-gradient(135deg, #ed8936, #dd6b20); 
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes slideIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.slide-in { 
+    animation: slideIn 0.5s ease-out; 
+}
+
+/* ===== SYNTAX HIGHLIGHTING ===== */
+.syntax-highlight .key { 
+    color: #0066cc; 
+}
+
+.syntax-highlight .string { 
+    color: #d14; 
+}
+
+.syntax-highlight .number { 
+    color: #905; 
+}
+
+.syntax-highlight .boolean { 
+    color: #1e90ff; 
+}
+
+.syntax-highlight .null { 
+    color: #999; 
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .h-80 {
+        height: 12rem;
+    }
+    
+    .h-96 {
+        height: 16rem;
+    }
+}
